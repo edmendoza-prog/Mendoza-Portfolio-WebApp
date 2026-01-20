@@ -75,6 +75,38 @@ nav .container {
     text-align: center;
 }
 
+.profile-picture {
+    margin-bottom: 2rem;
+    animation: fadeInDown 0.8s ease;
+}
+
+.profile-picture img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.profile-picture img:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
@@ -247,6 +279,94 @@ nav .container {
 .journey-content p {
     color: var(--text-secondary);
     line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.tech-stack-card {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.tech-stack-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.tech-stack-card h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.tech-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.tech-reason {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.journey-goals {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.journey-goals h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.journey-goals ul {
+    list-style: none;
+    padding: 0;
+}
+
+.journey-goals ul li {
+    color: var(--text-secondary);
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.journey-goals ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 /* Footer */
@@ -308,3 +428,143 @@ footer p {
         font-size: 1.75rem;
     }
 }
+
+/* Contact Section */
+.contact {
+    padding: 5rem 0;
+    background-color: var(--bg-white);
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.contact-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-btn {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-item {
+    padding: 1.5rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.info-item p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact h2 {
+        font-size: 2rem;
+    }
+}
+

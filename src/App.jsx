@@ -4,7 +4,9 @@ import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Learning from './components/Learning'
 import Journey from './components/Journey'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
 function App() {
@@ -16,8 +18,10 @@ function App() {
         <Projects />
         <Learning />
         <Journey />
+        <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }

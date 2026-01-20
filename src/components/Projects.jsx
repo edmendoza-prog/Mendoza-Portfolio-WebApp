@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 function Projects() {
   const projects = [
@@ -18,7 +19,7 @@ function Projects() {
     },
     {
       number: '03',
-      title: 'Full-Stack Portfolio & Web Application',
+      title: 'Full-Stack Web Application',
       tags: ['Next.js', 'React', 'Vercel'],
       description: 'This aspirational project represents my goal of becoming a professional developer by building and deploying a modern, full-stack web application that showcases my skills and serves as a living portfolio. I envision creating a polished, responsive platform using cutting-edge technologies like Next.js, integrating APIs for dynamic content, and deploying it seamlessly on Vercel to demonstrate my ability to deliver production-ready applications. This project will not only highlight my technical capabilities but also show my commitment to following industry best practices, maintaining clean code architecture, and creating applications that provide genuine value to users.',
       isAspirational: true
@@ -28,12 +29,24 @@ function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2>The "Big Three" Projects</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          The "Big Three" Projects
+        </motion.h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div 
+            <motion.div 
               key={index} 
               className={`project-card ${project.isAspirational ? 'aspirational' : ''}`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              whileHover={{ scale: 1.02 }}
             >
               <div className="project-number">{project.number}</div>
               <h3>{project.title}</h3>
@@ -46,7 +59,7 @@ function Projects() {
               {project.isAspirational && (
                 <div className="status-badge">Aspirational</div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
