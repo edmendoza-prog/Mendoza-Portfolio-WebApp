@@ -12,7 +12,7 @@ function Hero() {
           transition={{ duration: 0.5 }}
         >
           <img 
-            src="\Motoko.jpeg"
+            src="/mendoza.png"
             alt="Ed Ryan S. Mendoza" 
           />
         </motion.div>
@@ -29,8 +29,9 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          I am an aspiring web developer passionate about building clean, functional web applications 
-          while continuously learning modern technologies to create meaningful digital solutions.
+          I am an aspiring web developer who enjoys turning ideas into working products. I focus on 
+          writing clean, understandable code, experimenting with modern tools like React and Next.js, 
+          and always asking how each feature can genuinely help the people who use it.
         </motion.p>
       </div>
     </section>

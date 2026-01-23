@@ -40,16 +40,14 @@ function Journey() {
         >
           <p>
             After careful consideration, I have decided to follow the Pro Path by focusing on React 
-            and Next.js for my future projects because these technologies are modern, industry-relevant, 
-            and represent the tools that professional developers use in production environments today. 
-            React's component-based architecture and vast ecosystem provide the flexibility and power 
-            needed to build sophisticated user interfaces, while Next.js extends these capabilities with 
-            server-side rendering, static site generation, and built-in optimization features that enhance 
-            performance and user experience. Additionally, these technologies integrate seamlessly with 
-            Vercel, enabling smooth deployment workflows and allowing me to focus on building great 
-            applications rather than wrestling with infrastructure concerns. By committing to this stack, 
-            I am aligning my learning path with industry demand and equipping myself with the skills that 
-            employers actively seek in modern web developers.
+            and Next.js for my future projects because these technologies are modern, industry‑relevant, 
+            and widely used in real production environments. React's component-based architecture and 
+            vast ecosystem give me the flexibility to reuse UI pieces, manage complex state, and keep 
+            code organized as projects grow. Next.js extends these capabilities with server-side 
+            rendering, static site generation, and performance optimizations that help applications feel 
+            fast and responsive for users. Combined with tools like Laravel, Node.js, and MySQL on the 
+            backend, this stack lets me practice building complete, end‑to‑end experiences—from the 
+            database layer all the way to the final UI.
           </p>
           
           <div className="tech-stack-grid">

@@ -6,7 +6,11 @@ function Footer() {
   return (
     <footer>
       <div className="container">
-        <p>&copy; {currentYear} Portfolio. Built with passion and dedication.</p>
+        <p>
+          &copy; {currentYear} Ed Ryan S. Mendoza. This portfolio is a snapshot
+          of my journey as a web developer and will keep evolving as I learn
+          new tools and ship new projects.
+        </p>
       </div>
     </footer>
   )

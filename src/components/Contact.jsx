@@ -40,7 +40,9 @@ function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Have a question or want to work together? Feel free to reach out!
+          Have a question, an idea for a project, or feedback about my work?
+          I’m always open to learning from others and collaborating on meaningful
+          web applications.
         </motion.p>
         <motion.div 
           className="contact-content"
